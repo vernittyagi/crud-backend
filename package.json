@@ -1,0 +1,25 @@
+{
+  "name": "crud-backend",
+  "version": "1.0.0",
+  "description": "This is test line for readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vernittyagi/crud-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vernittyagi/crud-backend/issues"
+  },
+  "homepage": "https://github.com/vernittyagi/crud-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5"
+  }
+}
