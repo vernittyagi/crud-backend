@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-function authMiddleware(req,res,next){
+function protect(req,res,next){
     const authHeader = req.headers.authorization
 
     if(!authHeader){
@@ -21,4 +21,4 @@ function authMiddleware(req,res,next){
      }
 }
 
-export default authMiddleware;
+export default protect;

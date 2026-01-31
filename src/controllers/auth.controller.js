@@ -1,4 +1,3 @@
-import express from 'express'
 import bcrypt from 'bcryptjs'
 import User from "../models/User.js"
 import jwt from 'jsonwebtoken'
@@ -6,10 +5,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const router = express.Router();
-
 //register
-router.post("/register", async (req,res)=>{
+export const register =  async (req,res)=>{
     console.log(" ------ ------- ----- hitting register api ---- - -- - -- - - ");
     
     const {email, password} = req.body;
@@ -21,10 +18,10 @@ router.post("/register", async (req,res)=>{
         passwordHash: hashedPassword
     });
     res.json({message: "User registered !!!"})
-})
+};
 
 //login
-router.post("/login", async (req,res) => {
+export const login =  async (req,res) => {
     console.log(" ------ ------- ----- hitting LOGIN api ---- - -- - -- - - ");
     console.log("authorization - ", req.headers.authorization);
     
@@ -46,6 +43,4 @@ router.post("/login", async (req,res) => {
     );
 
     res.json({message: "Login successful !!!", token})
-})
-
-export default router;
+};

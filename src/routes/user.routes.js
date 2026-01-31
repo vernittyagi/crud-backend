@@ -1,9 +1,9 @@
 import express from 'express';
-import authMiddleware from '../middleware/auth.js';
+import protect from '../middleware/auth.middleware.js';
 
 const router = express.Router();
 
-router.get("/profile", authMiddleware, (req,res)=>{
+router.get("/profile", protect, (req,res)=>{
     res.json({
         message: "Protected data",
         user: req.user
